@@ -47,7 +47,7 @@ namespace Piskvorky_IT2A
       return grid;
     }
 
-    private void FillGridWithButtons(Grid grid)
+    private void FillGridWithButtons(Grid grid, Game game)
     {
       Button button;
       for (int x = 0; x < grid.ColumnDefinitions.Count(); x++)
@@ -61,6 +61,7 @@ namespace Piskvorky_IT2A
           Grid.SetColumn(button, x);
           Grid.SetRow(button, y);
           grid.Children.Add(button);
+          Item? item= game.Items.Find(i=>i.X == x && i.Y == y);
         }
       }
     }
@@ -68,8 +69,8 @@ namespace Piskvorky_IT2A
     private void Window_Initialized(object sender, EventArgs e)
     {
       
-      var grid = CreateGrid(20,game.Left + game.Right + 1,game.Top + game.Bottom + 1);
-      FillGridWithButtons(grid);
+      var grid = CreateGrid(50, game);
+      FillGridWithButtons(grid, game);
     }
   }
 }

@@ -5,4 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Piskvorky_IT2A"
         mc:Ignorable="d"
-        Title="MainWindow" Height="679" Width="800" Initialized="Window_Initialized"/>
+        Title="MainWindow" Height="679" Width="800" Initialized="Window_Initialized">
+    <Button HorizontalAlignment="Center" Height="269" Margin="0,169,0,0" VerticalAlignment="Top" Width="336">
+        <Ellipse Height="200" Stroke="#FF32FFFF" Width="200" StrokeThickness="20" RenderTransformOrigin="0.494,0.535"/>
+    </Button>
+</Window>
